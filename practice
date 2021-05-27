@@ -1,0 +1,211 @@
+///////////////////////////////////
+//////  Example ///////////////////
+///////////////////////////////////
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+    cout << "Hello world" << endl;
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+    long double a,b,c,sum = 0;
+
+    cout << "Enter the first number";
+    cin >> a;
+    cout << "Enter the second number";
+    cin >> b;
+    cout << "Enter the third number";
+    cin >> c;
+    sum = a+b+c;
+    cout << sum;
+    return 0;
+}
+
+//basic data type
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double a= 10.0,b =3.0;
+    double c;
+    c = a/b;
+
+    cout << c << endl;
+    cout << setprecision(2) << c << endl;
+
+    return 0;
+}
+
+#include <iostream>
+#include <iomanip>
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+    int integer;
+    long long1;
+    long long long2;
+    char character;
+    float floatnumber;
+    double doublenumber;
+
+    cin >> integer;
+    cin >> long1;
+    cin >> long2;
+    cin >> character;
+    cin >> floatnumber;
+    cin >> doublenumber;
+
+    cout << setprecision(20) << integer <<endl;
+    cout << setprecision(20) << long1 <<endl;
+    cout << setprecision(20) << long2 <<endl;
+    cout << setprecision(20) << character <<endl;
+    cout << setprecision(20) << floatnumber <<endl;
+    cout << setprecision(20) << doublenumber <<endl;
+    return 0;
+}
+
+//conditional statement
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    string num[10] = {"Greater than 9","one","two","three","four","five","six","seven","eight","nine"};
+    cout << "Enter a number";
+    cin >> n;
+    if(n > 9)
+    {
+        cout << num[0];
+    }
+    else
+    {
+        cout << num[n];
+    }
+    return 0;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cout << "Enter the first num: ";
+    cin >> a;
+    cout << "Enter the second num: ";
+    cin >> b;
+    string array[9] = {"one","two","three","four","five","six","seven","eight","nine"};
+    for( int i = a; i <= b; i++)
+    {
+        if(i<=9)
+        {
+            cout << array[i-1] << endl;
+        }
+        else
+        {
+            if(i%2 == 0)
+            {
+                cout << "even" << endl;
+            }
+            else
+            {
+                cout << "odd" << endl;
+            }
+        }
+
+    }
+    return 0;
+
+}
+
+#include <iostream>
+#include <cstdio>
+
+using namespace std;
+
+int maxOfFour (int a, int b, int c, int d)
+{
+    int max;
+    if (a>=b && a>=c && a>=d)
+    {
+        max = a;
+    }
+    else if(b>=a && b>=c && b>=d)
+    {
+        max = b;
+    }
+    else if(c>=a && c>=b && c>=d)
+    {
+        max = c;
+    }
+    else
+    {
+        max = d;
+    }
+    return max;
+}
+int main()
+{
+    int a, b, c, d;
+    cout << "Enter 4 nums: ";
+    cin>>a>>b>>c>>d;
+    cout << maxOfFour(a,b,c,d);
+    return 0;
+}
+
+// you have to complete the function void update(int *a, int *b),
+// which reads two integers as argument,
+// and sets a with the sum of them,
+// and b with the absolute difference of them.
+#include <iostream>
+
+using namespace std;
+void update(int *a, int *b)
+{
+    int temp = *a;
+    *a = *a + *b;
+    *b = temp - *b;
+    if(*b < 0)
+    {
+        *b = -(*b);
+    }
+
+}
+int main()
+{
+    int a,b;
+    int *pA = &a;
+    int *pB = &b;
+
+    cout << "Enter two nums: ";
+    cin >> a >>b;
+    update(pA,pB);
+    cout <<a <<" --- "<<b<<endl;
+    cout <<&a <<" --- "<<&b<<endl;
+    cout <<pA <<" --- "<<pB<<endl;
+    cout <<*pA <<" --- "<<*pB<<endl;
+    cout <<&pA <<" --- "<<&pB<<endl;
+    cout <<&*pA <<" --- "<<&*pB<<endl;
+    cout <<*&*pA <<" --- "<<*&*pB<<endl;
+
+
+    return 0;
+}
+*/
